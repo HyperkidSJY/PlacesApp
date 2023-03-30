@@ -53,7 +53,7 @@ class GetAddressFromLatLng(context: Context,private val latitude : Double,
     }
 
      fun getAddress() {
-        GlobalScope.launch(Dispatchers.IO) {
+        GlobalScope.launch(Dispatchers.Main) {
             val result = doInBackground()
             onPostExecute(result)
         }
